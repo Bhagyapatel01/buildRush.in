@@ -1,0 +1,32 @@
+/* src/app/components/product-detail/product-detail.component.css */
+.product-detail-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .product-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+  }
+  
+  .product-image {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .product-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .product-info p {
+    margin: 5px 0;
+  }
+  

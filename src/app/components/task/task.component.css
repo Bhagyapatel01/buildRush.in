@@ -1,0 +1,150 @@
+/* Main container for the task list */
+.task-container {
+  margin: 20px auto; /* Center the container horizontally */
+  padding: 20px;
+  /* background: linear-gradient(135deg, #0d0d0d, #1a1a1a); Gradient for a modern look */
+  background-color: black;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  font-family: "Poppins", Arial, sans-serif;
+  max-width: 1000px;
+  width: 90%; /* Make it responsive */
+}
+
+/* Header Styling */
+h2 {
+  margin-top: 90px;
+  text-align: center;
+  margin: 10px 0 30px;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* Task List Scrollable Wrapper */
+.task-list {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Scrollable Container */
+.scrollable-tasks {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Horizontal scrolling */
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.task {
+  flex: 0 0 calc(100% / 3 - 20px); /* Responsive task width */
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.task img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.task-content {
+  padding: 15px;
+}
+
+.task h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.task p {
+  font-size: 1rem;
+  color: #b3b3b3;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #007BFF, #0056b3);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  background: #004a99;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.scroll-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+.t{
+display: flex;
+}
+.t2{
+  margin-top: 50px;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .task {
+    flex: 0 0 calc(100% / 2 - 20px); /* 2 tasks per row */
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .task {
+    flex: 0 0 100%; /* 1 task per row */
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}

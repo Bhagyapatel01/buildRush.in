@@ -1,0 +1,13 @@
+<!-- src/app/components/product-detail/product-detail.component.html -->
+<div class="product-detail-container">
+    <div class="product-detail">
+      <img [src]="productDetails.image" alt="{{ productDetails.name }}" class="product-image" />
+      <div class="product-info">
+        <h2>{{ productDetails.name }}</h2>
+        <p>{{ productDetails.description }}</p>
+        <p><strong>Price:</strong> ${{ productDetails.price }}</p>
+        <p><strong>Product ID:</strong> {{ productDetails.id }}</p>
+      </div>
+    </div>
+  </div>
+  
